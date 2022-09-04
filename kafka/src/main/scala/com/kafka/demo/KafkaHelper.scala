@@ -11,7 +11,7 @@ import scala.util.{ Failure, Success, Try }
 object KafkaHelper {
   private[this] val logger = Logger(getClass.getSimpleName)
 
-  def produceMessages[T](f: ((Int, String)) => T, count: Int = 100): Seq[T] =
+  def produceMessages[T](f: ((Int, String)) => T, count: Int = 10): Seq[T] =
     (1 to count)
       .map { i =>
         (i, s"Message $i @ ${LocalDateTime.now} on ${Thread.currentThread.getName}")

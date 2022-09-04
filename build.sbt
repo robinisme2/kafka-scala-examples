@@ -62,8 +62,7 @@ lazy val kafka = project
       Resolver.bintrayRepo("cakesolutions", "maven")
     ),
     libraryDependencies ++= Seq(
-      "net.cakesolutions" %% "scala-kafka-client"         % V.cakeSolutions.version,
-      "net.cakesolutions" %% "scala-kafka-client-testkit" % V.cakeSolutions.version % Test
+      "org.apache.kafka"   % "kafka-clients"                % V.cakeSolutions.kafka
     )
   )
 
